@@ -19,7 +19,6 @@ function App() {
     size: "none",
     sortByPrice: "none",
   });
-  
 
   const onSort = (e) => {
     setFilterState((prev) => {
@@ -33,6 +32,7 @@ function App() {
     if (cloth.color === filterState.color) {
       return cloth;
     }
+    return false;
   })
     .filter((cloth) => {
       if (filterState.size === "none") return cloth;
@@ -40,6 +40,7 @@ function App() {
       if (cloth.size === filterState.size) {
         return cloth;
       }
+      return false;
     })
     .filter((cloth) => {
       if (filterState.gender === "none") return cloth;
@@ -47,6 +48,7 @@ function App() {
       if (cloth.gender === filterState.gender) {
         return cloth;
       }
+      return false;
     })
     .sort((a, b) => {
       if (filterState.sortByPrice === "asc") {
