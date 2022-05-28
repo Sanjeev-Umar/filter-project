@@ -19,7 +19,7 @@ function App() {
     size: "none",
     sortByPrice: "none",
   });
-  // const [sort, setSort] = useState("none");
+  
 
   const onSort = (e) => {
     setFilterState((prev) => {

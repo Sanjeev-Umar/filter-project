@@ -16,19 +16,16 @@ const FilterComponents = styled.div`
 
 const FilterBar = (props) => {
   const onColorChange = (e) => {
-    // console.log(e.target.value);
     props.setFilterState((prev) => {
       return { ...prev, color: e.target.value };
     });
   };
   const onSizeChange = (e) => {
-    // console.log(e.target.value);
     props.setFilterState((prev) => {
       return { ...prev, size: e.target.value };
     });
   };
   const onGenderChange = (e) => {
-    // console.log(e.target.value);
     props.setFilterState((prev) => {
       return { ...prev, gender: e.target.value };
     });
